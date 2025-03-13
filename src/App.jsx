@@ -1,73 +1,44 @@
-import React from "react";
+import React from 'react'
+import Tank1 from './Components/Tank1.jsx'
+import Tank2 from './Components/Tank2.jsx'
+import Tank3 from './Components/Tank3.jsx'
+import Tank4 from './Components/Tank4.jsx'
+import Tank5 from './Components/Tank5.jsx'
+import Tank6 from './Components/Tank6.jsx'
+import Tank7 from './Components/Tank7.jsx'
+import Tank8 from './Components/Tank8.jsx'
+import Tank9 from './Components/Tank9.jsx'
+import Tank10 from './Components/Tank10.jsx'
+import Tank11 from './Components/Tank11.jsx'
+import Tank12 from './Components/Tank12.jsx'
+import Tank13 from './Components/Tank13.jsx'
+import Tank14 from './Components/Tank14.jsx'
+import Tank15 from './Components/Tank15.jsx'
+
+
+
+
 
 function App() {
-  const today = new Date();
-
   return (
-    <>
-      {/* Title Section */}
-      <div className="text-center underline text-4xl bg-slate-600 text-white font-extrabold py-4">
-        BA No.- 83X2880A
-      </div>
-
-      {/* Table Section */}
-      <div className="flex justify-center mt-5 overflow-x-auto">
-        <table className="border-collapse border border-gray-700 shadow-lg w-3/4 bg-white">
-          {/* Table Header */}
-          <thead className="bg-gray-800 text-white">
-            <tr>
-              <th className="font-bold text-xl px-6 py-3 border border-gray-700">Serial No.</th>
-              <th className="font-bold text-xl px-6 py-3 border border-gray-700">Nomenclature</th>
-              <th className="font-bold text-xl px-6 py-3 border border-gray-700">Done</th>
-              <th className="font-bold text-xl px-6 py-3 border border-gray-700">Due</th>
-            </tr>
-          </thead>
-
-          {/* Table Body */}
-          <tbody>
-            {[
-              { id: 1, name: "TM-1", done: "11/01/2025", due: "11/07/2025" },
-              { id: 2, name: "TM-2", done: "24/06/2024", due: "24/06/2025" },
-              { id: 3, name: "ENG-OIL", done: "06/09/2024", due: "06/09/2025" },
-              { id: 4, name: "TXN-OIL", done: "17/07/2023", due: "17/07/2025" },
-              { id: 5, name: "STRIP-INSP", done: "01/06/2022", due: "01/06/2026" },
-              { id: 6, name: "STAB-OIL", done: "12/02/2019", due: "12/02/2024" },
-            ].map((item, index) => {
-              const dueDate = new Date(item.due.split("/").reverse().join("-"));
-              const isOverdue = dueDate < today;
-
-              return (
-                <tr key={item.id} className={`text-lg border border-gray-500 ${index % 2 === 0 ? "bg-gray-100" : "bg-gray-200"}`}>
-                  <td className="px-6 py-3 border border-gray-700 text-center">{item.id}</td>
-                  <td className="px-6 py-3 border border-gray-700">{item.name}</td>
-                  <td className="px-6 py-3 border border-gray-700 text-center">{item.done}</td>
-                  <td className={`px-6 py-3 border border-gray-700 text-center ${isOverdue ? "text-red-600 font-bold" : ""}`}>
-                    {item.due}
-                  </td>
-                </tr>
-              );
-            })}
-
-            {/* Extra Data Rows */}
-            {[
-              { id: 7, label: "EFC", value: "185.666" },
-              { id: 8, label: "LAST DATE OF FIRE", value: "19/06/2024" },
-              { id: 9, label: "BTY ISSUE AT", value: "02-23-2021" },
-              { id: 10, label: "MAJOR DEFECT", value: "LRF CANVELISE FROM 62P" },
-              { id: 11, label: "DEMAND", value: "-NIL-" },
-            ].map((item, index) => (
-              <tr key={item.id} className={`text-lg border border-gray-500 ${index % 2 === 0 ? "bg-gray-100" : "bg-gray-200"}`}>
-                <td className="px-6 py-3 border border-gray-700 text-center">{item.id}</td>
-                <td className="px-6 py-3 border border-gray-700" colSpan="3">
-                  <span className="font-semibold">{item.label}:</span> {item.value}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </>
-  );
+    <div>
+      <Tank1/>
+      <Tank2/>
+      <Tank3/>
+      <Tank4/>
+      <Tank5/>
+      <Tank6/>
+      <Tank7/>
+      <Tank8/>
+      <Tank9/>
+      <Tank10/>
+      <Tank11/>
+      <Tank12/>
+      <Tank13/>
+      <Tank14/>
+      <Tank15/>
+    </div>
+  )
 }
 
-export default App;
+export default App
