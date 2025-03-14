@@ -54,7 +54,7 @@ function App() {
               { id: 8, label: "LAST DATE OF FIRE", value: "19/09/2024" },
               { id: 9, label: "BTY ISSUE AT", value: "05-08-2024" },
               { id: 10, label: "MAJOR DEFECT", value: "-NIL-" },
-              { id: 11, label: "DEMAND", value: "ENG. " },
+              { id: 11, label: "DEMAND", value: "ENG. CANBLISZED FROM BOH TANK" },
             ].map((item, index) => (
               <tr key={item.id} className={`text-lg border border-gray-500 ${index % 2 === 0 ? "bg-gray-100" : "bg-gray-200"}`}>
                 <td className="px-6 py-3 border border-gray-700 text-center">{item.id}</td>
